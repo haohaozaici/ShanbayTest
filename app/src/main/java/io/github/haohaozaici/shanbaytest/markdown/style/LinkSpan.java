@@ -9,18 +9,20 @@ import android.text.style.URLSpan;
  */
 public class LinkSpan extends URLSpan {
 
-    private int color;
+  private int color;
 
-    public LinkSpan(String url, int color) {
-        super(url);
-        this.color = color;
-    }
 
-    @Override
-    public void updateDrawState(TextPaint ds) {
-        super.updateDrawState(ds);
-        ds.setColor(color);
-        ds.setUnderlineText(false);
-    }
+  public LinkSpan(String url, int color) {
+    super(url);
+    this.color = color;
+  }
+
+
+  @Override
+  public void updateDrawState(TextPaint ds) {
+    super.updateDrawState(ds);
+    ds.setColor(color);
+    ds.setUnderlineText(false);
+  }
 
 }

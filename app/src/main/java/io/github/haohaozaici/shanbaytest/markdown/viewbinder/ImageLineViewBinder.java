@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import com.blankj.utilcode.util.StringUtils;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import io.github.haohaozaici.shanbaytest.GlideApp;
 import io.github.haohaozaici.shanbaytest.R;
@@ -29,11 +30,16 @@ public class ImageLineViewBinder extends ItemViewBinder<ImageLine, ImageLineView
 
   @Override
   protected void onBindViewHolder(@NonNull ViewHolder holder, @NonNull ImageLine imageLine) {
-    holder.img_des.setText(imageLine.getTitle());
-    GlideApp.with(holder.img)
-        .load(imageLine.getLink())
-        .diskCacheStrategy(DiskCacheStrategy.DATA)
-        .into(holder.img);
+    if (!StringUtils.isEmpty(imageLine.getTitle())) {
+      holder.img_des.setText(imageLine.getTitle());
+    }
+    if (!StringUtils.isEmpty(imageLine.getLink())) {
+      GlideApp.with(holder.img)
+          .load(imageLine.getLink())
+          .diskCacheStrategy(DiskCacheStrategy.DATA)
+          .into(holder.img);
+    }
+
   }
 
 

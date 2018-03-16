@@ -6,13 +6,12 @@ package io.github.haohaozaici.shanbaytest.markdown.parser;
  */
 public interface QueueConsumer {
 
+  void setQueueProvider(QueueProvider provider);
 
-    void setQueueProvider(QueueProvider provider);
-
-    /**
-     * LineQueue提供器
-     */
-    interface QueueProvider {
-        LineQueue getQueue();
-    }
+  /**
+   * LineQueue提供器
+   */
+  interface QueueProvider {
+    LineQueue getQueue();
+  }
 }

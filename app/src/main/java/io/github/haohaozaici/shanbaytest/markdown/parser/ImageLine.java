@@ -15,14 +15,6 @@ public class ImageLine extends Line {
   }
 
 
-  public static ImageLine toImageLine(Line line, String url, String title) {
-    ImageLine imageLine = (ImageLine) new Line(line.getSource());
-    imageLine.link = url;
-    imageLine.title = title;
-    return imageLine;
-  }
-
-
   public String getLink() {
     return link;
   }

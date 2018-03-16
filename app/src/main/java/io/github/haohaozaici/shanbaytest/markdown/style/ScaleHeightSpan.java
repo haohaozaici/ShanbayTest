@@ -9,18 +9,20 @@ import android.text.style.LineHeightSpan;
  */
 public class ScaleHeightSpan implements LineHeightSpan {
 
-    private float scale;
+  private float scale;
 
-    public ScaleHeightSpan(float scale) {
-        this.scale = scale;
-    }
 
-    @Override
-    public void chooseHeight(CharSequence text, int start, int end, int spanstartv, int v, Paint.FontMetricsInt fm) {
-        fm.ascent *= scale;
-        fm.top *= scale;
-        fm.descent *= scale;
-        fm.bottom *= scale;
-    }
+  public ScaleHeightSpan(float scale) {
+    this.scale = scale;
+  }
+
+
+  @Override
+  public void chooseHeight(CharSequence text, int start, int end, int spanstartv, int v, Paint.FontMetricsInt fm) {
+    fm.ascent *= scale;
+    fm.top *= scale;
+    fm.descent *= scale;
+    fm.bottom *= scale;
+  }
 
 }

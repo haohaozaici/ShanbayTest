@@ -24,6 +24,6 @@ public interface StyleBuilder {
 
   SpannableStringBuilder ul(CharSequence charSequence);
 
-  SpannableStringBuilder ol(CharSequence charSequence,  int index);
+  SpannableStringBuilder ol(CharSequence charSequence, int index);
 
 }
