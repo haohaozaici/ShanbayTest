@@ -21,7 +21,7 @@
 4. 图片
 5. 嵌套
 
-将原库中最终返回的`Spanned`接口，改为返回`List<Line>`提供给`Recycler View`渲染。
+将原库中最终返回的`Spanned`接口，改为返回`List<Line>`提供给`Recycler View`渲染。
 
 ### 代码结构，图片加载，Recycler View实现渲染
 原库采用了自己实现的双向链表满足了完整markdown所需的数据结构，使用接口将正则匹配、渲染的方法和他们的实现分离。
